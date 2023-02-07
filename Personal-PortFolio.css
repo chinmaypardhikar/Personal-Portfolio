@@ -34,8 +34,14 @@
     backdrop-filter: blur(20px);
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.close{
     display: none;
-    
+}
+
+.nav-visible{
+    display: none;
 }
 
 .nav-items{
@@ -139,8 +145,13 @@ hr.belowname{
 
 .container-1-content-left-social img{
     width: 2vw;
+    height: 4vh;
     cursor: pointer;
     user-select: none;
+}
+
+.container-1-content-left-social a{
+    height: 4vh;
 }
 
 .icon{
@@ -541,7 +552,7 @@ hr.belowname{
 /* Container-4 --> Started */
 .container-4{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #20223869;
     display: flex;
     flex-direction: column;
@@ -572,8 +583,8 @@ hr.belowname{
 }
 
 .card{
-    min-width: 15rem;
-    min-height: 16rem;
+    min-width: 20rem;
+    min-height: 20rem;
     position: relative;
     z-index: 1;
     border-radius: 15px;
@@ -607,8 +618,8 @@ hr.belowname{
 
 .card-containt{
 
-    min-width: 15rem;
-    min-height: 15rem;
+    min-width: 20rem;
+    min-height: 20rem;
     border-radius: 15px;
     z-index: 3;
 }
@@ -618,8 +629,8 @@ hr.belowname{
 }
 
 .card-img img{
-    width: 16.76rem;
-    height: 10rem;
+    width: 20rem;
+    height: 12rem;
     border-radius: 15px 15px 0 0;
     z-index: -1;
 }
@@ -637,8 +648,8 @@ hr.belowname{
 
 .card-text{
     background-color: #1a1a1a;
-    width: 16.787rem ;
-    height: 7rem;
+    width: 20rem ;
+    height: 10rem;
     margin-top: -0.3rem;
     padding: 1rem;
     border-radius: 0 0 15px 15px;
@@ -661,8 +672,9 @@ hr.belowname{
 /* Container-5 --> Started */
 
 .container-5{
-    height: 120vh;
+    height: auto;
     width: 80%;
+    padding-bottom: 5rem;
 }
 
 .c5-p1{
@@ -676,7 +688,7 @@ hr.belowname{
 
 .vertical-line{
     border-left: 5px solid rgb(1, 179, 179);
-    height: 85vh;
+    height: 40rem;
     width: 0.4vw;
   }
 
@@ -726,12 +738,13 @@ hr.belowname{
 /*Container - 6 --> Started*/
 
 .container-6{
-    height: 70vh;
+    height: auto;
     width: 100%;
     background-color: #20223869;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5rem;
 }
 
 .container-6-content{
@@ -829,6 +842,10 @@ input[type=text] {
         scroll-behavior: smooth;
     }
 
+    .wrapper{
+        position: relative;
+    }
+
     /* Container-1 --- Started */
     .container-1{
         width: 100%;
@@ -837,21 +854,55 @@ input[type=text] {
     }
 
     .nav-bar{
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        width: 70%;
+        margin: 0;
+        left: 0;
+        z-index: 20;
+        position: absolute;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        background-color: #ffffff08;
+        box-shadow: 1px 1px 10px rgba(0, 255, 255, 0.337);
+        transition: 1s;
+        margin-left: -70%;
+    }
+
+    .close{
+        color: #fffafa;
+        position: absolute;
+        right: 10%;
+        top: 3%;
+        display: block;
+    }
+
+    .nav-visible{
+        color: #fffafa;
+        position: absolute;
+        right: -18%;
+        top: 3%;
+        display: block;
+        transition: 8s;
     }
 
     .logo img{
         width: 18vw;
     }
 
+    .nav-bar .logo{
+        display: none;
+    }
+
     .nav-items{
-        gap: 3vw;
+        gap: 7vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .nav-items a{
-        font-size: 3.7vw;
+        font-size: 7vw;
     }
 
     .container-1-content{
@@ -897,6 +948,11 @@ input[type=text] {
 
     .container-1-content-left-social img{
         width: 6vw;
+        height: 3vh;
+    }
+
+    .container-1-content-left-social a{
+        height: 3vh;
     }
 
     .container-1-content-left-social .icon{
@@ -1086,18 +1142,26 @@ input[type=text] {
 
     .exp-card-containt{
         width: 100%;
+        gap: 1rem;
     }
 
     .exp-card-image{
         width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .exp-card-image img{
+        width: 80%;
+        height: 100%;
     }
 
     .exp-date{
-        font-size: 3vw;
+        font-size: 3.9vw;
     }
 
     .exp-containt{
-        font-size: 2.5vw;
+        font-size: 3.3vw;
     }
       
       /* Card container */

@@ -17,13 +17,19 @@
             <div class="logo">
                 <img src="white-logo.png" alt="logo">
             </div>
+            <div class="close" id="close" onclick="funCollapse()">
+                X
+            </div>
+            <div class="nav-visible" id="hamburger" onclick="funvisible()">
+                <img src="hamburger.jpg" alt="hamburger" width="35">
+            </div>
             <div class="nav-items">
-                <a href="#home" onclick="topfun()">Home</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Pojects</a>
-                <a href="#awards">Awards</a>
-                <a href="#contacts">Contact</a>
+                <a href="#home" onclick="topfun()" id="homes">Home</a>
+                <a href="#skills" onclick="funCollapse()">Skills</a>
+                <a href="#experience" onclick="funCollapse()">Experience</a>
+                <a href="#projects" onclick="funCollapse()">Pojects</a>
+                <a href="#awards" onclick="funCollapse()">Awards</a>
+                <a href="#contacts" onclick="funCollapse()">Contact</a>
             </div>
         </div>
         <div class="container-1">
@@ -36,13 +42,13 @@
                     </div>
                     <div class="container-1-content-left-social">
                         <div class="icon github">
-                            <img id="github" src="github.png" alt="github">
+                            <a href="https://github.com/chinmaypardhikar" target="_blank"><img id="github" src="github.png" alt="github"></a>
                         </div>
                         <div class="icon linkedin">
-                            <img id="linkedin" src="linkedin.png" alt="linkedin">
+                            <a href="https://in.linkedin.com/in/chinmay-pardhikar-209384191" target="_blank"><img id="linkedin" src="linkedin.png" alt="linkedin"></a>
                         </div>
                         <div class="icon instagram">
-                            <img id="instagram" src="instagram.png" alt="instagram">
+                            <a href="https://www.instagram.com/chinmaypardhi/?hl=en" target="_blank"><img id="instagram" src="instagram.png" alt="instagram"></a>
                         </div>
                     </div>
                         <img srcset="chinmay-pic-mobile.png 600w,chinmay-pic.png 700w" sizes="(min-width:600px) 600px, (min-width:700px) 700px" src="chinmay-pic.png" id="chinmay-pic" alt="Chinmay" height="600px">
@@ -62,7 +68,7 @@
             <div class="container-2-left">
                 <div class="container-2-left-containt">
                     <div class="container-2-left-containt-left">
-                        <p class="c2-p1">SKILLS</p>
+                        <p class="c2-p1">MY SKILLS</p>
                     </div>
                     <div class="container-2-left-containt-right">
                         <p class="c2-p1-1">&#9900; HTML</p>
@@ -112,9 +118,9 @@
                             <p>2021</p><p>to</p><p>Present</p>
                         </div>
                         <div class="exp-containt">
-                            <p>&#9900; This page shares my best articles to read on topics like health, happiness, creativity, productivity and more.</p>
-                            <p>&#9900; The central question that drives my work is, “How can we live better?”</p>
-                            <p></p>&#9900; To answer that question, I like to write about science-based ways to solve practical problems.
+                            <p>&#9900; I have worked on Microsoft Dynamics 365 Technology.</p>
+                            <p>&#9900; My responsibility is to develop C# plugins and JavaScript to achieve desire output.</p>
+                            <p></p>&#9900; I have learned a lot to how we can effectively work on user story and how to handle the client.
                         </div>
                     </div>
                     <div class="exp-card-image">
@@ -127,9 +133,8 @@
                             <p>2020</p><p>to</p><p>2021</p>
                         </div>
                         <div class="exp-containt">
-                            <p>&#9900; You’ll find interesting articles to read on topics like how to stop procrastinating as well as personal</p>
-                            <p>&#9900; recommendations like my list of the best books to read and my minimalist travel guide.</p>
-                            <p>&#9900; Ready to dive in? You can use the categories below to browse my best articles.</p>
+                            <p>&#9900; I had joined as intern and enhance my skills on Augmented Reality (AR) Technology.</p>
+                            <p>&#9900; Worked on AR in Astronomy Project.</p>
                         </div>
                     </div>
                     <div class="exp-card-image">
@@ -222,14 +227,14 @@
                         <img src="call.png" alt="call/message/coffee" width="50">
                         <div class="contact-info-text">
                             <p class="c6-p2">Call me Now</p>
-                            <p class="c6-p3">1234567890</p>
+                            <p class="c6-p3">9834404364</p>
                         </div>
                     </div>
                     <div class="contact-info">
                         <img src="mail.png" alt="call/message/coffee" width="50">
                         <div class="contact-info-text">
                             <p class="c6-p2">Chat with me</p>
-                            <p class="c6-p3">abc@gmail.com</p>
+                            <p class="c6-p3">c.pardhikar7@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-info">
@@ -271,6 +276,8 @@
     <script>
         var myNav = document.getElementById('navbar');
         window.onscroll = function () { 
+            if(screen.width>600)
+            {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 )
                 {
                 document.getElementById('navbar').style.backgroundColor = "#ffffff08";
@@ -282,7 +289,23 @@
                 document.getElementById('navbar').style.boxShadow = "0px 0px 0px transparent";
                 document.getElementById('navbar').style.transition = "0s";
                  }
+            }
          };
+    </script>
+
+    <script>
+
+        document.getElementById("homes").addEventListener("click", funCollapse);
+
+        function funCollapse(){
+            document.getElementById('navbar').style.marginLeft = "-70%";
+            document.getElementById('hamburger').style.display = "block";
+        }
+
+        function funvisible(){
+            document.getElementById('navbar').style.marginLeft = "0";
+            document.getElementById('hamburger').style.display = "none";
+        }
     </script>
 
     
