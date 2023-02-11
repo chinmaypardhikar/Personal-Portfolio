@@ -51,7 +51,7 @@
                             <a href="https://www.instagram.com/chinmaypardhi/?hl=en" target="_blank"><img id="instagram" src="instagram.png" alt="instagram"></a>
                         </div>
                     </div>
-                        <img srcset="chinmay-pic-mobile.png 600w,chinmay-pic.png 700w" sizes="(min-width:600px) 600px, (min-width:700px) 700px" src="chinmay-pic.png" id="chinmay-pic" alt="Chinmay" height="600px">
+                        <img  src="chinmay-pic1.png" id="chinmay-pic" alt="Chinmay" height="600px">
                        
                 </div>
                 <div class="container-1-content-right">
@@ -75,15 +75,16 @@
                         <p class="c2-p1-1">&#9900; CSS</p>
                         <p class="c2-p1-1">&#9900; JS</p>
                         <p class="c2-p1-1">&#9900; React.js</p>
-                        <p class="c2-p1-1">&#9900; Node.js</p>
-                        <p class="c2-p1-1">&#9900; MongoDB</p>
                         <p class="c2-p1-1">&#9900; SQL</p>
                         <p class="c2-p1-1">&#9900; JAVA</p>
                         <p class="c2-p1-1">&#9900; C#</p>
                         <p class="c2-p1-1">&#9900; C++</p>
-                        <p class="c2-p1-1">&#9900; Azure DevOps</p>
-                        <p class="c2-p1-1">&#9900; Azure Functions</p>
                         <p class="c2-p1-1">&#9900; Microsoft Dynamics 365</p>
+                        <!-- <p class="c2-p1-1" style="color: gray;text-shadow: 1px 1px 3px rgb(0, 0, 0);">&#9900; Node.js (coming soon..)</p>
+                        <p class="c2-p1-1" style="color: gray;text-shadow: 1px 1px 3px rgb(0, 0, 0);">&#9900; MongoDB (coming soon..)</p>
+                        <p class="c2-p1-1" style="color: gray;text-shadow: 1px 1px 3px rgb(0, 0, 0);">&#9900; Azure DevOps (coming soon..)</p>
+                        <p class="c2-p1-1" style="color: gray;text-shadow: 1px 1px 3px rgb(0, 0, 0);">&#9900; Azure Functions (coming soon..)</p> -->
+                        
                     </div>
                 </div>
 
@@ -298,8 +299,11 @@
         document.getElementById("homes").addEventListener("click", funCollapse);
 
         function funCollapse(){
+            if(screen.width<800)
+            {
             document.getElementById('navbar').style.marginLeft = "-70%";
             document.getElementById('hamburger').style.display = "block";
+            }
         }
 
         function funvisible(){
